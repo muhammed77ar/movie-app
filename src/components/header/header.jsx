@@ -17,11 +17,13 @@ export default function Header() {
   
   const handelSubmitMovie = (e) =>{
     e.preventDefault()
-    dispatch(fetchAsyncMovies(refMovie.current.value))
+    dispatch(fetchAsyncMovies(refMovie.current.value.trim()))
+    setOpen(!open)
   }
   const handelSubmitSerie = (e) =>{
     e.preventDefault()
-    dispatch(fetchAsyncSeries(refSerie.current.value))
+    dispatch(fetchAsyncSeries(refSerie.current.value.trim()))
+    setOpen(!open)
   }
 
 
